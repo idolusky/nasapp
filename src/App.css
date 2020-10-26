@@ -8,18 +8,43 @@
   padding-top: 30px;
   padding-bottom: 30px;
   font-size: 20px;
+  font-family: 'Syne Mono', monospace;
+  padding-left: 0 auto;
+
 }
 #root {
   display:grid;
+  background-color: rgb(195, 211, 185);
   
 }
 .description {
   border: #254587;
   padding: 20px;
   text-align: center;
-  text-justify: auto;
+  text-justify: inter-word;
+  font-family: 'Nunito', sans-serif;
+  background-color: rgb(252, 223, 221);
 }
 img{
-  width: 400px;
-  padding-bottom: 100px;
+  width: 500px;
+  padding-bottom: 10px;
+  padding-left:50px;
+  
+  align-self: auto;
+  max-height: 400px;
+}
+
+#input {
+  padding:50 px;
+}
+
+.search-bar {
+  padding-top: 50px;
+}
+
+.tool-bar {
+  background-color: rgb(167, 228, 175);
+}
+.home-title{
+padding-right: 50px;
 }

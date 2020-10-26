@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios'
 import MediaCard from './MediaCard'
-import { Button, TextField } from '@material-ui/core'
+import { Button, TextField, Box } from '@material-ui/core'
 
 
 export default function Search(props) {
@@ -30,8 +30,8 @@ export default function Search(props) {
     return (
         <div>
             <div className='search-bar'>
-                <input id='input' name='input' type="text" />
-                <Button variant="contained" color="secondary" onClick={handleInput}> Search</Button>
+                <input id='input' name='input' type="text" placeholder='Search The Galaxy' />
+                <Box paddingTop='10px'> <Button variant="contained" color="secondary" onClick={handleInput}> Search</Button> </Box>
             </div>
             <div>
                 {results.map((r, i) => <div><MediaCard match={props.match} addToFavourites={addToFavourites} result={r} index={i} />  </div>)}
