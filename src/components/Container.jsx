@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Route, BrowserRouter as Router, useLocation } from 'react-router-dom';
+import { Route, BrowserRouter as Router, useLocation, Redirect } from 'react-router-dom';
 import Home from './Home';
 import Search from './Search';
 import Favourites from './Favourites';
@@ -12,6 +12,7 @@ export default function Container(props) {
     return (
 
         <div>
+            <Redirect exact from='/' to='/home' ></Redirect>
             <Route path='/home' exact render={({ match }) => <Home match={match} />} />
             <Route path='/search' exact render={({ match }) => <Search match={match} />} />
             <Route path='/favourites' exact component={Favourites} />

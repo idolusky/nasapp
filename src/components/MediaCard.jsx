@@ -24,7 +24,6 @@ export default function MediaCard(props) {
         await props.addToFavourites(newImage)
     }
     const deletePhoto = async () => {
-        console.log(props);
         props.favourite ? props.deleteFavourite(props.favourite._id) : props.deleteExpandedFavourite(props.favourites._id)
 
     }
@@ -36,7 +35,7 @@ export default function MediaCard(props) {
             {props.match.url === '/home' ?
                 <div>
                     <div className='home-title title'>{props.data.title}</div>
-                    <img src={props.data.url} alt="" className='image' />
+                    <div className='home-photo'><img src={props.data.url} alt="" className='image' /></div>
                     <Button onClick={saveHomePhoto} color="secondary">Save<FavoriteIcon /> </Button>
                     <div className='description'>{props.data.explanation}</div>
                 </div> :

@@ -19,10 +19,8 @@ export default function Search(props) {
 
     useEffect(() => {
         (async () => {
-            console.log(input)
             const data = await Axios.get(`https://images-api.nasa.gov/search?q=${input}&media_type=image`)
             const newResults = data.data.collection.items
-            console.log(newResults)
             setResults(newResults)
         })()
     }, [input])
@@ -31,7 +29,9 @@ export default function Search(props) {
         <div>
             <div className='search-bar'>
                 <input id='input' name='input' type="text" placeholder='Search The Galaxy' />
-                <Box paddingTop='10px'> <Button variant="contained" color="secondary" onClick={handleInput}> Search</Button> </Box>
+                <Box paddingTop='10px'>
+                    <Button variant="contained" color="secondary" onClick={handleInput}> Search</Button>
+                </Box>
             </div>
             <div>
                 {results.map((r, i) => <div><MediaCard match={props.match} addToFavourites={addToFavourites} result={r} index={i} />  </div>)}

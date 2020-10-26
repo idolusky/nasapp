@@ -5,8 +5,6 @@ import Container from './components/Container';
 import NavBar from './components/NavBar';
 
 function App() {
-
-
   return (
     <Router>
       <div className="App">
