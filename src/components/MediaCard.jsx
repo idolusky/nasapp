@@ -53,7 +53,7 @@ export default function MediaCard(props) {
                         :
                         < div >
                             <div className='title'>{props.favourites.title}</div>
-                            <img src={props.favourites.imgUrl} alt="" />
+                            <div className="expanded-photo"> <img src={props.favourites.imgUrl} alt="" /></div>
                             <Button variant="contained" color="secondary" onClick={deletePhoto} >Delete<DeleteOutlinedIcon /> </Button>
                             <div className='description'>{props.favourites.description}</div>
                         </div>
